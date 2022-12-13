@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  front:
+    image: akbar/hahnui:2.0.0
+    ports:
+      - "8085:80"
+  backend: 
+    image: hahnbackend:2.0.0
+    ports:
+      - "7158:80"
