@@ -1,0 +1,19 @@
+.inputEdit{
+    margin-left: 4%;
+    width: 25%;
+    height: 20px;
+}
+.divInput{
+    margin-bottom: 3%;
+}
+.btnSubmit{
+    border: solid 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #84c0eb;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+.redText{
+    color: red;
+}

@@ -1,0 +1,29 @@
+<div *ngIf="person">
+<h2>{{person.firstName}}</h2>
+<div [ngClass]="'divInput'">
+    First Name:
+    <input required maxlength="100" id="firstName" name="firstName" [(ngModel)]="person.firstName" #firstName="ngModel" [ngClass]="'inputEdit'" placeholder="Please enter new First Name">
+    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"  class="alert">
+        <div [ngClass]="'redText'" *ngIf="firstName.errors?.['required']">
+          First Name is required.
+         </div>
+         <div [ngClass]="'redText'" *ngIf="firstName.errors?.['maxlength']">
+           Name must be at least 4 characters long.
+        </div>
+    </div>
+<div [ngClass]="'divInput'">
+    Last Name:
+    <input required maxlength="100" [(ngModel)]="person.lastName" [ngClass]="'inputEdit'"  #lastName="ngModel" placeholder="Please enter new Last Name">
+    <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"  class="alert">
+        <div [ngClass]="'redText'" *ngIf="lastName.errors?.['required']">
+          First Name is required.
+         </div>
+         <div [ngClass]="'redText'" *ngIf="lastName.errors?.['maxlength']">
+           Name must be at least 4 characters long.
+        </div>
+    </div>
+</div>
+<button [ngClass]="'btnSubmit'" (click)="updatePerson(person)" *ngIf="person.id">Save</button>
+<button [ngClass]="'btnSubmit'" (click)="deletePerson(person)" *ngIf="person.id">Delete</button>
+<button [ngClass]="'btnSubmit'" (click)="createPerson(person)" *ngIf="!person.id">Create</button>
+</div>
