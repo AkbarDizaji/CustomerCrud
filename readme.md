@@ -1,3 +1,3 @@
-This project is for solve the code-challenge of Hahn company.
-I developed a simple CRUD with DDD and TDD.
+I developed a simple CRUD with DDD,TDD and CQRS by using some design patterns.
+
 More informations about codes are described in video.
