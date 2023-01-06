@@ -1,3 +1,2 @@
-I developed a simple CRUD with DDD,TDD and CQRS by using some design patterns.
+In this repository, I developed a .NET project with clean architecture.
 
-More informations about codes are described in video.
